@@ -3,6 +3,6 @@ resources:
 - ./kustomize/base
 
 patches:
-- path: /kustomize/ignore-deployment-mutation-patch.yaml
+- path: ./kustomize/ignore-deployment-mutation-patch.yaml
   target:
     kind: Deployment
