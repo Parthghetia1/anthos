@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-limits
+  namespace: config-sync-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-limits
+  template:
+    metadata:
+      labels:
+        app: test-limits
+    spec:
+      containers:
+      - name: alpine
+        image: alpine:lastest
+        command: [ "/bin/bash", "-c", "--" ]
+        args: [ "while true; do sleep 30; done;" ]
