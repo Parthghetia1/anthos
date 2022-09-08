@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-limits2
+  namespace: config-sync-test2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-limits2
+  template:
+    metadata:
+      labels:
+        app: test-limits2
+    spec:
+      containers:
+      - name: alpine2
+        image: alpine:latest
+        command:
+          - /bin/sh
+          - "-c"
+          - "sleep 60m"
+        resources:
+          limits:
+            cpu: 1
+            memory: 1Gi
+          requests:
+            cpu: 100m
+            memory: 128Mi
