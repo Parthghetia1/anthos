@@ -21,5 +21,5 @@ spec:
     - config-management-monitoring
     - resource-group-system
   parameters:
-    cpu: 2
+    cpu: "2"
     memory: 4Gi
