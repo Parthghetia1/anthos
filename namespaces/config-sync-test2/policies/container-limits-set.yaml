@@ -1,0 +1,24 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: K8sContainerLimits
+metadata:
+  name: container-must-have-limits-in-ns-selector-test
+  namespace: config-sync-test2
+spec:
+  enforcementAction: dryrun
+  match:
+    kinds:
+    - apiGroups:
+      - ""
+      kinds:
+      - Pod
+    excludedNamespaces:
+    - kube-system
+    - kube-node-lease
+    - kube-public
+    - gatekeeper-system
+    - config-management-system
+    - config-management-monitoring
+    - resource-group-system
+  parameters:
+    cpu: 2
+    memory: 4Gi
