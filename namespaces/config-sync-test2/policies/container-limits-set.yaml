@@ -2,8 +2,6 @@ apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sContainerLimits
 metadata:
   name: container-must-have-limits-in-ns-selector-test
-namespaces:
-  - config-sync-test2
 spec:
   enforcementAction: dryrun
   match:
@@ -12,6 +10,8 @@ spec:
       - ""
       kinds:
       - Pod
+    namespaces:
+    - config-sync-test2
     excludedNamespaces:
     - kube-system
     - kube-node-lease
