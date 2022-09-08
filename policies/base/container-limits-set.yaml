@@ -10,10 +10,7 @@ spec:
       - ""
       kinds:
       - Pod
-  parameters:
-    cpu: 200m
-    memory: 1Gi
-  excludedNamespaces:
+    excludedNamespaces:
     - kube-system
     - kube-node-lease
     - kube-public
@@ -21,3 +18,6 @@ spec:
     - config-management-system
     - config-management-monitoring
     - resource-group-system
+  parameters:
+    cpu: 200m
+    memory: 1Gi
