@@ -3,6 +3,6 @@ kind: ConfigConnectorContext
 metadata:
   # you can only have one ConfigConnectorContext per namespace
   name: configconnectorcontext.core.cnrm.cloud.google.com
-  namespace: gke-deployer-iap-bastion-host
+  namespace: extreme-unison-362413
 spec:
-  googleServiceAccount: "config-connector@gke-deployer-iap-bastion-host.iam.gserviceaccount.com"
+  googleServiceAccount: "config-connector@extreme-unison-362413.iam.gserviceaccount.com"
