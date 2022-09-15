@@ -4,7 +4,7 @@ metadata:
   namespace: config-connector-361915
   annotations:
     cnrm.cloud.google.com/project-id: config-connector-361915
-    # cnrm.cloud.google.com/deletion-policy: abandon
+    cnrm.cloud.google.com/deletion-policy: abandon
   labels:
     test: "test"
   name: configconnectortest
