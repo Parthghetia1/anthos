@@ -1,0 +1,9 @@
+apiVersion: pubsub.cnrm.cloud.google.com/v1beta1
+kind: PubSubTopic
+metadata:
+  namespace: extreme-unison-362413
+  annotations:
+    cnrm.cloud.google.com/project-id: extreme-unison-362413
+  labels:
+    test: "test"
+  name: configconnectortest
