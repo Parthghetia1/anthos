@@ -7,4 +7,5 @@ metadata:
     cnrm.cloud.google.com/deletion-policy: abandon
   labels:
     test: "test"
+    second: "label"
   name: configconnectortest
