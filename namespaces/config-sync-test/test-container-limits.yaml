@@ -14,7 +14,7 @@ spec:
         app: test-limits
     spec:
       containers:
-      - name: alpine2
+      - name: alpine
         image: alpine:latest
         command:
           - /bin/sh
