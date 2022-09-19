@@ -1,8 +1,9 @@
 apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: k8sResouceQuota
+kind: k8sResourceQuota
 metadata:
   name: namespace-must-have-resourcequota
 spec:
+  enforcementAction: dryrun
   match:
     kinds:
       - apiGroups: [""]
