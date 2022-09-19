@@ -17,7 +17,7 @@ spec:
           requestns := input.request.object.metadata.namespace
           test := data.inventory.namespace[requestns]["v1"]
           # not data.inventory.namespace[requestns]["v1"]["ResourceQuota"][requestns]
-          true
+          1 > 0
           msg := sprintf("Input is <%v>", [test])
           # msg := sprintf("container <%v> could not be created because the <%v> namespace does not have ResourceQuotas defined", [input.request.object.metadata.name,input.request.object.metadata.namespace])
           }
