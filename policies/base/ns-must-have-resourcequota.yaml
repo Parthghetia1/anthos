@@ -1,0 +1,17 @@
+apiVersion: constraints.gatekeeper.sh/v1beta1
+kind: k8sResouceQuota
+metadata:
+  name: namespace-must-have-resourcequota
+spec:
+  match:
+    kinds:
+      - apiGroups: [""]
+        kinds: ["Pod"]
+    excludedNamespaces:
+    - kube-system
+    - kube-node-lease
+    - kube-public
+    - gatekeeper-system
+    - config-management-system
+    - config-management-monitoring
+    - resource-group-system
