@@ -13,9 +13,9 @@ spec:
         package k8sresourcequota
 
         violation[{"msg": msg}] {
-          input.request.kind.kind == "Pod"
-          requestns := input.request.object.metadata.namespace
-          not data.inventory.namespace[requestns]["v1beta1"]["ResourceQuota"][requestns]
+          # input.request.kind.kind == "Pod"
+          # requestns := input.request.object.metadata.namespace
+          # not data.inventory.namespace[requestns]["v1beta1"]["ResourceQuota"][requestns]
           msg := sprintf("Input <%v>", [input])
           # msg := sprintf("container <%v> could not be created because the <%v> namespace does not have ResourceQuotas defined", [input.request.object.metadata.name,input.request.object.metadata.namespace])
           }
