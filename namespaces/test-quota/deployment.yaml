@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-quota
+  namespace: test-quota
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-quota
+  template:
+    metadata:
+      labels:
+        app: test-quota
+    spec:
+      containers:
+      - name: alpine
+        image: alpine:latest
+        command:
+          - /bin/sh
+          - "-c"
+          - "sleep 60m"
+        resources:
+          limits:
+            cpu: 1
+            memory: 1Gi
+          requests:
+            cpu: 130m
+            memory: 128Mi
