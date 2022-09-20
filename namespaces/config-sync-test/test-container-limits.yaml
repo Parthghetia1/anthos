@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-limits2
+  name: test-limits
   namespace: config-sync-test
 spec:
   replicas: 1
