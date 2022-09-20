@@ -15,7 +15,7 @@ spec:
         violation[{"msg": msg}] {
           # input.request.kind.kind == "Pod"
           requestns := input.request.object.metadata.namespace
-          #test := data.inventory.namespace[requestns]["v1"]["ResourceQuota"][]
+          # test := data.inventory.namespace[requestns]["v1"]["ResourceQuota"][]
           not input.request.object.metadata.namespace
           # not data.inventory.namespace[requestns]["v1"]["ResourceQuota"][]
           msg := sprintf("Input is <%v>", [data.inventory.namespace])
