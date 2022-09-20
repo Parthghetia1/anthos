@@ -14,7 +14,7 @@ spec:
 
         violation[{"msg": msg}] {
           input.review.kind.kind == "Pod"
-          requestns := input.request.object.metadata.namespace
+          requestns := input.review.object.metadata.namespace
           # rqs := {e | e := data.inventory.namespace[requestns]["v1"]["ResourceQuota"][_]}
           # count(rqs) == 0
           msg := sprintf("Input is4 <%v>", [input])
