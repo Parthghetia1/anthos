@@ -16,7 +16,7 @@ spec:
           # input.request.kind.kind == "Pod"
           requestns := input.request.object.metadata.namespace
           rqs := {e | e := data.inventory.namespace[requestns]["v1"]["ResourceQuota"][_]}
-          count(rqs) > 0
+          count(rqs) == 0
           msg := sprintf("Input is <%v>", [data.inventory.namespace])
           # msg := sprintf("container <%v> could not be created because the <%v> namespace does not have ResourceQuotas defined", [input.request.object.metadata.name,input.request.object.metadata.namespace])
           }
