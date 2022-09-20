@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: test-limits
+  name: test-limits2
   namespace: config-sync-test
 spec:
   replicas: 1
@@ -14,7 +14,7 @@ spec:
         app: test-limits
     spec:
       containers:
-      - name: alpine2
+      - name: alpine
         image: alpine:latest
         command:
           - /bin/sh
