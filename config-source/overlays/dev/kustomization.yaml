@@ -20,12 +20,12 @@ bases:
 patches:
 # ServiceAccount - make name unique per environ 
 - target:
-    kind: ServiceAccount
-    name: foo-ksa
+    kind: Namespace
+    name: deployer-namespace
   patch: |-
     - op: replace
       path: /metadata/name
-      value: foo-ksa-dev
+      value: dev-deployer
 # Pod creators - give all FooCorp developers access 
 - target:
     kind: RoleBinding
