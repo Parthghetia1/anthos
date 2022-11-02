@@ -34,6 +34,18 @@ patches:
     - op: replace
       path: /subjects/0/name
       value: developers-all@foo-corp.com
+- target:
+    kind: Deployment
+    name: hello-world
+  patch: |-
+    - op: replace
+      path: /metadata/name
+      value: hello-world-dev
+    - op: replace
+      path: /spec/replicas
+      value: 3
+# [END anthosconfig_multi_environments_kustomize_config_source_overlays_dev_kustomization] 
 commonLabels:
   environment: dev
 # [END anthosconfig_multi_environments_kustomize_config_source_overlays_dev_kustomization] 
+
