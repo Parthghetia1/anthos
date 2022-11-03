@@ -43,7 +43,7 @@ patches:
       value: hello-world-dev
     - op: replace
       path: /spec/replicas
-      value: 2
+      value: 3
 # [END anthosconfig_multi_environments_kustomize_config_source_overlays_dev_kustomization] 
 commonLabels:
   environment: dev
