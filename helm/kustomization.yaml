@@ -1,0 +1,6 @@
+# ./base/kustomization.yaml
+helmCharts:
+- name: helm-chart
+  releaseName: helm-chart
+  namespace: default
+...
